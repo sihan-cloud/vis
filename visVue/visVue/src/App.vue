@@ -9,7 +9,7 @@ import Home from './views/Home.vue'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <br/>
-        <RouterLink to="/about">AboutUs</RouterLink>
+        <RouterLink to="/About">AboutUs</RouterLink>
         <br/>
         <RouterLink to="/Main">Main</RouterLink>
       </nav>
