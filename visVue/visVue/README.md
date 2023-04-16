@@ -8,6 +8,9 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ```sh
 npm install
+npm install less
+npm install element-plus
+npm install axios
 ```
 
 ### Compile and Hot-Reload for Development
@@ -15,3 +18,4 @@ npm install
 ```sh
 npm run dev
 ```
+
