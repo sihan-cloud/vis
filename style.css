@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  /* 当用户手动导航或者 CSSOM scrolling API 触发滚动操作时 */
+    scroll-behavior: smooth; 
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+    }
+
+.p1{
+    position: relative;
+    height: fit-content;
+    height: 100%;
+    width: 100%;
+}
+.p1 header{
+    position: relative;
+    /* height: 100%;
+    width: 100%; */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    top:200px;
+    color: #fff;
+    font-size: 80px;
+    font-family: "华文新魏";
+    letter-spacing: 20px;
+
+}
+.p1 span{
+    position: relative;
+    /* height: 100%;
+    width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:50px;
+    color: #fff;
+    font-size: 65px;
+    font-family: "华文新魏";
+    letter-spacing: 10px;
+} 
+.p1 article{
+    position:relative;
+    height: 25.8vh;
+    /* width: 100%; */
+    top: 428px;
+    bottom: 0vh;
+    background: #00000073;
+    border-color: #fff;
+    
+    padding-top: 25px;
+    text-indent: 2em;
+    letter-spacing: 8px; 
+    line-height: 29px;
+    
+    
+} 
+.p1 article p{
+    color: #fff;
+    width: 600px;
+    margin: 0 auto;
+    font-size: 19px;
+    font-family: "宋体"; 
+    
+} 
+
+.p1 article hr{
+    width: 100%;
+    color:#fff;
+    size: 10px;
+}
+
+
+.p2 {
+    position: relative;
+    top:55vh;
+    background: #00000073;
+    height: 100vh;
+}
+.p2 .container{
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    /* justify-content: center; */
+    left:20vw;
+    align-items: center;
+    width: 60vw;
+    height: 100vh;
+}
+
+.container .panel{
+    position: relative;
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color:white;
+    cursor: pointer;
+    flex:1;
+    margin: 10px;
+    transition: all 0.7s ease-in 0s;
+}
+.container .panel h2{
+    font-size: 40px;
+    position: absolute;
+    bottom: 50px;
+    left:3vw;
+    opacity:0;
+    font-family: "华文新魏";
+}
+.panel.active{
+    flex:8;
+}
+.panel.active h2{
+    opacity: 1;
+    transition: opacticy 0.3s ease-in 0.4s;
+}
+ @media(max-width:480px) {
+    .p2{
+        width: 100vw;
+    }
+ }
+
+
+
+ .p3 {
+    position: relative;
+    top:55vh;
+    background:#00000073;
+    /* justify-content: center; */
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    margin: 0 0;
+ }
+.p3 .hr hr{
+    width: 100%;
+    color:#fff;
+    size: 10px;
+}
+.p3 .lung{
+    position: absolute;
+    height: 80%;
+    left:3vw;
+    width: 30vw;
+}  
+ .p3 p{
+    position: absolute;
+    top:35vh;
+    left:52vw;
+    font-size: 35px;
+    font-family: "华文新魏";
+    color:#fff;
+    line-height: 40px;
+    text-align: center;
+ }
+
