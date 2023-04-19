@@ -64,6 +64,7 @@ header h1 {
   max-width: 1920px;
   display: flex;
   flex-direction:row;
+  //margin-right: 8px;
   padding: 0.125rem 0.125rem 0;
   // background-color: aqua;
   
