@@ -72,13 +72,13 @@ header h1 {
     //height: 90%;
     flex:3;
     #left-top{
-      height: 50%;
+      height: 45.75%;
       border: 2px solid;
       // background-color: blueviolet;
     }
     #left-bottom{
-      margin-top: 20px;
-      height: 50%;
+      margin-top: 8px;
+      height: 45.75%;
       border: 2px solid;
       // background-color: cadetblue;
     }
@@ -92,13 +92,13 @@ header h1 {
     // background-color: beige;
 
     #middle-top{
-      height: 60%;
+      height: 61.5%;
       border: 2px solid;
       // background-color: blueviolet;
     }
     #middle-bottom{
-      margin-top: 20px;
-      height: 38%;
+      margin-top: 8px;
+      height: 30%;
       border: 2px solid;
       // background-color: cadetblue;
     }
@@ -109,19 +109,19 @@ header h1 {
     flex:3;
     // background-color: blue;
     #right-top{
-      height: 35%;
+      height: 30%;
       // background-color: blueviolet;
       border: 2px solid;
     }
     #right-middle{
       margin-top: 8px;
-      height: 35%;
+      height: 30%;
       // background-color: blueviolet;
       border: 2px solid;
     }
     #right-bottom{
       margin-top: 8px;
-      height: 42%;
+      height: 30%;
       // background-color: cadetblue;
       border: 2px solid;
     }
