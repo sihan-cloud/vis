@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ECharts</title>
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+    <script src="echarts.js"></script>
+  </head>
+  <body>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById('main'));
+
+      // 指定图表的配置项和数据
+      option = {
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                 formatter: function (params, ticket, callback) {
+                                   console.log(params)
+                                   var res = params[0].name ;
+                                   for (var i = 0, l = params.length; i < l; i++) {
+                                       res += '<br/>' + params[i].seriesName + ' : ' + Math.abs(params[i].value) ;     
+                                       }
+                                   setTimeout(function () {
+                                       // 仅为了模拟异步回调
+                                       callback(ticket, res);
+                                   }, 500)
+                                   return 'loading...';
+                               }
+            },
+            visualMap: [
+              {
+    orient: 'horizontal',
+    left: 'center',
+    min: 90.28,
+    max: 151.32,
+    //text: ['High Score', 'Low Score'],
+    // Map the score column to color
+    dimension: 0,
+    inRange: {
+      color: ['#a1c1ae', '#81a98e', '#6f9c7d','#437d55','#2f7145']
+    }
+              },
+              
+    {
+    orient: 'horizontal',
+    left: 'center',
+    show:false,
+    min: -190.07,
+    max: -105.85,
+    //text: ['High Score', 'Low Score'],
+    // Map the score column to color
+    dimension: 0,
+    inRange: {
+      color: ['#2f7145','#437d55', '#6f9c7d','#81a98e','#a1c1ae']
+    },
+    seriesIndex:1
+    
+  }],
+            legend: {
+                data:[ '活立木总蓄积量', '森林蓄积量']
+            },
+            grid: {
+                left: '20%',
+                right: '20%',
+                bottom: '8%',
+                top:'8%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    axisLabel : { formatter: function (value){return Math.abs(value);//显示的数值都取绝对值
+                } 
+        },
+                    type : 'value'
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'category',
+                    //axisTick : {show: false},
+                    data : ['第九次','第八次','第七次','第六次','第五次','第四次','第三次','第二次','第一次']
+                   // data : ageArea
+                }
+            ],
+            series : [
+                {
+                    name:'男',
+                    type:'bar',
+                    barWidth:35,
+                     barGap: 0,
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'right',
+
+                        }
+                    },
+                    data:[175.6,151.32,137.21, 124.56, 112.66, 101.37, 91.41, 90.28, 86.56]
+                   // data:FbarData
+                },
+                {
+                    name:'女',
+                    type:'bar',
+                   // barWidth:82,
+                    barGap: 0,
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'left',
+                           formatter:function(v){return Math.abs(v.data)}
+                        }
+                    },
+
+                   data:[-190.07,-164.33,-149.13, -136.18, -124.88, -117.85, -105.85, -102.61, -95.32]
+                   // data:MbarData
+                }
+            ]
+        };
+      // 使用刚指定的配置项和数据显示图表。
+      myChart.setOption(option);
+    </script>
+  </body>
+</html>

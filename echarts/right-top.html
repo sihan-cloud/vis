@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ECharts</title>
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+    <script src="echarts.js"></script>
+  </head>
+  <body>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById('main'));
+
+      // 指定图表的配置项和数据
+      option = {
+  angleAxis: {},
+  radiusAxis: {
+    type: 'category',
+    data: ['第一次', '第二次', '第三次', '第四次', '第五次', '第六次', '第七次', '第八次', '第九次'],
+    z: 10
+  },
+  polar: {},
+  series: [
+    {
+      type: 'bar',
+      roundCap:true,
+      data: [27.5,28,28.5,29,29.63,30.45,31.56,33.38,36.3],
+      animationEasingUpdate:'cubicInOut',
+      color: ['#81a98e'],
+      coordinateSystem: 'polar',
+      name: '人造林在森林中的占比',
+      //stack: 'a',
+      emphasis: {
+        focus: 'series'
+      }
+    },
+    {
+      type: 'bar',
+      roundCap:true,
+      data: [12.7,12,12.98,13.92,	16.55,18.21,20.36,21.63,22.96],
+      coordinateSystem: 'polar',
+      color:['#437d55'],
+      name: '森林覆盖率',
+      //stack: 'a',
+      emphasis: {
+        focus: 'series'
+      }
+    },
+    
+  ],
+  legend: {
+    show: true,
+    data: ['人造林在森林中的占比', '森林覆盖率']
+  }
+};
+      myChart.setOption(option);
+    </script>
+  </body>
+</html>
