@@ -1,6 +1,8 @@
 <template>
+  <header>
+      <h1>国土绿化数据总览</h1>
+    </header>
   <div class="com-page">
-    <h4>This is a Main page</h4>
     <div class="screen-body">
       <section class="screen-left">
         <div id="left-top">
@@ -41,24 +43,42 @@ export default {
 }
 </script>
 <style  lang="less">
+header {
+  position: relative;
+  height: 1.5rem;
+  //background: url(../images/head_bg.png) no-repeat top center;
+  //background-size: 100% 100%;
+}
+header h1 {
+  font-size: 2.3rem;
+  color: #120909;
+  text-align: center;
+  line-height: 0rem;
+  display: table;
+  margin: 0 auto;
+}
 .screen-body{
   width: 100%;
   height: 100%;
+  min-width: 1024px;
+  max-width: 1920px;
   display: flex;
   flex-direction:row;
+  padding: 0.125rem 0.125rem 0;
   // background-color: aqua;
   
   .screen-left{
-    width: 26%;
-    height: 90%;
+    //width: 26%;
+    //height: 90%;
+    flex:3;
     #left-top{
-      height: 55%;
+      height: 50%;
       border: 2px solid;
       // background-color: blueviolet;
     }
     #left-bottom{
       margin-top: 20px;
-      height: 42%;
+      height: 50%;
       border: 2px solid;
       // background-color: cadetblue;
     }
@@ -66,8 +86,9 @@ export default {
   .screen-middle{
     margin-left:0.5% ;
     margin-right:0.5% ;
-    width:48%;
-    height: 90%;
+    //width:48%;
+    //height: 90%;
+    flex:5;
     // background-color: beige;
 
     #middle-top{
@@ -83,8 +104,9 @@ export default {
     }
   }
   .screen-right{
-    width: 26%;
-    height: 90%;
+    //width: 26%;
+    //height: 90%;
+    flex:3;
     // background-color: blue;
     #right-top{
       height: 35%;
