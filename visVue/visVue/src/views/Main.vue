@@ -1,4 +1,5 @@
 <template>
+  <div id="building">
   <header>
       <h1>国土绿化数据总览</h1>
     </header>
@@ -33,16 +34,26 @@
       </section>
     </div>
   </div>
+  </div>
 </template>
+
 <script>
 import Map from '../components/Map.vue'
 export default {
- components: {
-   Map
- }
+  components: {
+    Map
+  }
 }
 </script>
+
 <style  lang="less">
+#building{
+  background:url("../components/bg.png");
+  width:100%;
+  height:100%;
+  position:fixed;
+  background-size:100% 100%;
+}
 header {
   position: relative;
   height: 1.5rem;
@@ -58,7 +69,7 @@ header h1 {
   margin: 0 auto;
 }
 .screen-body{
-  width: 100%;
+  //width: 98%;
   height: 100%;
   min-width: 1024px;
   max-width: 1920px;
@@ -72,6 +83,8 @@ header h1 {
     //width: 26%;
     //height: 90%;
     flex:3;
+    margin-left:0.2% ;
+    margin-bottom: 0.2%;
     #left-top{
       height: 45.75%;
       border: 2px solid;
@@ -85,8 +98,10 @@ header h1 {
     }
   }
   .screen-middle{
-    margin-left:0.5% ;
-    margin-right:0.5% ;
+     margin-left:0.5% ;
+     margin-right:0.5% ;
+     margin-bottom: 0.2%;
+    //margin: 0 0.125rem 0.1875rem;
     //width:48%;
     //height: 90%;
     flex:5;
@@ -108,6 +123,8 @@ header h1 {
     //width: 26%;
     //height: 90%;
     flex:3;
+    margin-right:0.2% ;
+    margin-bottom: 0.2%;
     // background-color: blue;
     #right-top{
       height: 30%;

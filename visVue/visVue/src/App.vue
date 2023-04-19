@@ -20,5 +20,9 @@ import Home from './views/Home.vue'
 </template>
 
 <style scoped>
-
+body{
+  margin:0;
+  padding:0;
+  border:0
+}
 </style>
